@@ -1,5 +1,5 @@
 # Sentinel 1 Orbit Downloader
-A coding practice for myself. This Downloader is created to automatically download POD Precise Orbit Ephemerides from  [Sentinel 1 orbit website](https://qc.sentinel1.eo.esa.int/aux_poeorb)
+A web crawer coding practice for myself. This Downloader is created to automatically download POD Precise Orbit Ephemerides from  [Sentinel 1 orbit website](https://qc.sentinel1.eo.esa.int/aux_poeorb)
 
 
 ### `Orbit.py`
