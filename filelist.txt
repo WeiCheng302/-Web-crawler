@@ -1,1 +1,1 @@
-A filelist for web crawler.
+A filelist for Sentinel-1-Orbit-Downloader.
