@@ -6,14 +6,14 @@ import os
 #Set initial value
 url = 'https://qc.sentinel1.eo.esa.int/aux_poeorb/?page=1'
 
-dateIwant ='20180121' #input("Please Enter Your Date As YYYYMMDD EX.20190805")
+dateIwant =input("Please Enter Your Date As YYYYMMDD EX.20190805: ")
 print(dateIwant)
 daycheck=int(dateIwant)-int(20140801)
 if daycheck<0:
     print('Please Enter The Date After 20140801')
     os._exit(1215)
 
-data = 'B'#input('Enter A for SentinelA file, Enter B for SentinelB file')
+data = input('Enter A for SentinelA file, Enter B for SentinelB file: ')
 print(data)
 if data != 'A' and data != 'B' :
     print('Please Enter A or B')
@@ -43,7 +43,7 @@ check = 0
 k=0
 for i in range(1,1000):
     urlpage=base_url + "/?page=%d" % i
-    print(urlpage)
+    #print(urlpage)
     content = get_content(urlpage)
     soup = BeautifulSoup(content, "html.parser")
     filelinks = soup.find_all('td')
@@ -57,8 +57,8 @@ for i in range(1,1000):
             if fileday[105:109] == dateshow[0:4]:
                 if  fileday[109:111] == dateIwant[5:7]:
                     if fileday[111:113] == dateIwant[8:10] and fileday[65] == data:
-                        print(urlpage)
-                        print(fileday)
+                        #print(urlpage)
+                        #print(fileday)
                         link = str(fileday[13:140])
                         filename = fileday[63:140]
                         print('Begin Downloading：', str(fileday[63:66]), dateshow)
@@ -80,13 +80,13 @@ for i in range(1,1000):
         print('finish')
         break
     if fileday[105:109] == dateIwant[0:4]: #year equal
-        print(fileday)
+        #print(fileday)
         for j in range(100):
             if fileday[109:111] == dateIwant[5:7] :#or fileday[109:111] == dateshow[5:7]:
-                print(fileday)
+                #print(fileday)
                 if fileday[111:113] == dateIwant[8:10] and fileday[65] == data: #day equal and satelite equal
-                    print(urlpage)
-                    print(fileday)
+                    #print(urlpage)
+                    #print(fileday)
                     link = str(fileday[13:140])
                     filename = fileday[63:140]
                     print('Begin Downloading：', str(fileday[63:66]), dateshow)
