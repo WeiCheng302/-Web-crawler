@@ -11,7 +11,7 @@ By adjusting the parameter in the for loop, the range of the downloading can be 
 
 ### `Specificdayorbitdownload.py`
 
-This program can help download the Precise Orbit Ephemerides of Sentinel 1A and Sentinel 1B ON *SPECIFIC DAY*
+This program can help download the Precise Orbit Ephemerides of Sentinel 1A and Sentinel 1B ON **SPECIFIC DAY**
 from [Sentinel 1 orbit website](https://qc.sentinel1.eo.esa.int/aux_poeorb).
 After enterning the program, type the date as YYYYMMDD, and type A for S1A while B for S1B.
 
